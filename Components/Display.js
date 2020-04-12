@@ -1,9 +1,14 @@
 import React from "react";
 
 function Display(props) {
+  const completedStyle = {
+    font: "Italic",
+    color: "#cdcdcd",
+    textDecoration:"line-through"
+  }
   return (
     <div>
-      <p>{props.name}</p>
+      <p style = {props.completed ? completedStyle:null}>{props.name}</p>
       <input
         type="checkbox"
         checked={props.completed}
